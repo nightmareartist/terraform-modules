@@ -1,0 +1,31 @@
+# Compiled files
+*.tfstate
+*.tfstate.backup
+*.tfstate.lock.info
+
+# logs
+*.log
+
+# Directories
+.terraform/
+.vagrant/
+.terragrunt-cache/
+tmp/
+
+# SSH Keys
+*.pem
+
+# Backup files
+*.bak
+*.backup
+
+# Env file
+*.env
+
+# JetBrains dir
+.idea/
+
+main_providers.tf
+!**/common/main_providers.tf
+
+.DS_Store

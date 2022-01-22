@@ -1,0 +1,31 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "ecs:RunTask"
+      ],
+      "Resource": [
+        "arn:aws:ecs:*:${account_id}:task-definition/${task_def_family}:*"
+      ],
+      "Condition": {
+        "ArnLike": {
+          "ecs:cluster": "arn:aws:ecs:*:${account_id}:cluster/${cluster_name}"
+        }
+      }
+    },
+    {
+      "Effect": "Allow",
+      "Action": "iam:PassRole",
+      "Resource": [
+        "*"
+      ],
+      "Condition": {
+        "StringLike": {
+          "iam:PassedToService": "ecs-tasks.amazonaws.com"
+        }
+      }
+    }
+  ]
+}
