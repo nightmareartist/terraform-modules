@@ -1,3 +1,3 @@
 # Terraform modules
 
-Repo of Terraform modules I've built throughout the years.
+Repo with Terraform modules I've built throughout the years.
